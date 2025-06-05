@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
   <title>Electron App with Sidebar</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.tailwindcss.com"></script>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 </head>
 <body class="h-screen flex bg-gray-100">
-
-  <!-- Sidebar -->
-  <aside class="w-64 bg-blue-700 shadow-md flex flex-col py-4">
+    <!-- Sidebar -->
+  <aside class="w-[250px] bg-blue-700 shadow-md flex flex-col py-4">
     <h2 class="text-3xl font-extrabold mb-10 mt-2 text-center text-white">STOCK APP</h2>
     <nav class="flex flex-col gap-2 font-bold">
-       <a href="index.html" class="active relative transition-all duration-300 text-white hover:text-blue-700 flex items-center gap-2 py-2 px-3 w-full hover:bg-white group">
-         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 stroke-current" viewBox="0 0 32 32" fill="none">
+      <a href="index.html" class="transition-all duration-300 text-zinc-400 hover:text-blue-700 flex items-center gap-2 py-2 px-3 w-full hover:bg-white">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 stroke-current" viewBox="0 0 32 32" fill="none">
           <polygon points="31,17 21,17 21,11 28,11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
           <circle cx="7" cy="24" r="3" stroke-width="2" />
           <circle cx="26" cy="24" r="3" stroke-width="2" />
@@ -30,9 +31,9 @@
           <polyline points="9.8,23 21,23 21,17 1,17 1,23 4.2,23" stroke-width="2" />
           <polyline points="23.2,23 21,23 21,17 31,17 31,23 28.8,23" stroke-width="2" />
         </svg>
-         <p>Stock</p>
+        <p>Stock</p>
       </a>
-      <a href="clients.html" class="transition-all duration-300 text-zinc-400 hover:text-blue-700 flex items-center gap-2 py-2 px-3 w-full hover:bg-white">
+      <a href="clients.html" class="active relative transition-all duration-300 text-white hover:text-blue-700 flex items-center gap-2 py-2 px-3 w-full hover:bg-white group">
         <svg class="mb-1 w-5 h-5 fill-current group-hover:fill-blue-700 transition-colors duration-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
           <path d="M8 7C9.65685 7 11 5.65685 11 4C11 2.34315 9.65685 1 8 1C6.34315 1 5 2.34315 5 4C5 5.65685 6.34315 7 8 7Z" />
           <path d="M14 12C14 10.3431 12.6569 9 11 9H5C3.34315 9 2 10.3431 2 12V15H14V12Z" />
@@ -41,12 +42,25 @@
       </a>
     </nav>
   </aside>
-
-  <!-- Main content -->
   <main class="flex-1 p-8">
-    <h1 class="text-[70px] text-center font-extrabold text-gray-800 mb-4">Bienvenue</h1>
-    
+    <h1 class="text-[70px] text-center font-extrabold text-gray-800 mb-9">Clients.</h1>
+    <!-- Search bar -->
+    <div dir="rtl" class="flex justify-center mb-6">
+     <div class="flex items-center border border-gray-300 rounded-[20px] overflow-hidden w-full max-w-md bg-white">
+      <input
+        type="text"
+        placeholder="البحث عن عميل..."
+        class="w-full arab px-4 py-2 text-right text-[19px] text-gray-700 placeholder-gray-400 focus:outline-none "
+      />
+      <button class="p-3 text-white bg-blue-700 h-full rounded-l-[20px]">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 103.6 3.6a7.5 7.5 0 0013.05 13.05z" />
+        </svg>
+      </button>
+     </div>
+    </div>
   </main>
- 
 </body>
 </html>

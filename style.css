@@ -1,5 +1,24 @@
 *{
-  font-family: "Lora", serif;
+  font-family: 'WF Visual Sans', sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+}
+@font-face {
+ font-family: 'WF Visual Sans';
+ src: url('https://dhygzobemt712.cloudfront.net/Fonts/VF/WFVisualSansVF.woff2') format('woff2');
+ font-weight: 100 900;
+ font-style: normal;
+ font-display: swap;
+}
+.arab{
+  font-family: "Cairo", sans-serif;
+}
+.active:before{
+  content:"";
+  height:100%;
+  width:3px;
+  background-color: white;
+  position: absolute;
+  left:0;
+  top:0;
 }

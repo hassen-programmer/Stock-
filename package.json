@@ -13,5 +13,9 @@
   "devDependencies": {
     "electron": "^36.4.0",
     "electron-reload": "^2.0.0-alpha.1"
+  },
+  "dependencies": {
+    "path": "^0.12.7",
+    "sqlite3": "^5.1.7"
   }
 }
