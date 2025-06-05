@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Electron App with Sidebar</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+<body class="h-screen flex bg-gray-100">
+
+  <!-- Sidebar -->
+  <aside class="w-64 bg-white shadow-md flex flex-col py-4">
+    <h2 class="text-2xl font-bold mb-6 text-blue-600">MyApp</h2>
+    <nav class="flex flex-col gap-2 font-bold">
+      <a href="#" class="text-gray-700 flex items-center gap-2 py-2 px-3 w-full rounded hover:text-green-800 hover:fill-green-900 hover:bg-green-200">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 16 16" fill="none">
+            <path d="M8 7C9.65685 7 11 5.65685 11 4C11 2.34315 9.65685 1 8 1C6.34315 1 5 2.34315 5 4C5 5.65685 6.34315 7 8 7Z" fill="#000000"/>
+            <path d="M14 12C14 10.3431 12.6569 9 11 9H5C3.34315 9 2 10.3431 2 12V15H14V12Z" fill="#000000"/>
+        </svg>
+        <p>Clients</p>
+      </a>
+      <a href="#" class="text-gray-700 flex items-center gap-2 py-2 px-3 w-full rounded hover:text-green-800 hover:fill-green-900 hover:bg-green-200">
+         <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Icons" viewBox="0 0 32 32" xml:space="preserve">
+             <style type="text/css">
+                  	.st0{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+             </style>
+             <polygon class="st0" points="31,17 21,17 21,11 28,11 "/>
+             <circle class="st0" cx="7" cy="24" r="3"/>
+             <circle class="st0" cx="26" cy="24" r="3"/>
+             <rect x="2" y="9" class="st0" width="5" height="4"/>
+             <rect x="2" y="13" class="st0" width="5" height="4"/>
+             <rect x="7" y="9" class="st0" width="5" height="4"/>
+             <rect x="7" y="13" class="st0" width="5" height="4"/>
+             <rect x="12" y="9" class="st0" width="5" height="4"/>
+             <rect x="12" y="13" class="st0" width="5" height="4"/>
+             <polyline class="st0" points="9.8,23 21,23 21,17 1,17 1,23 4.2,23 "/>
+             <polyline class="st0" points="23.2,23 21,23 21,17 31,17 31,23 28.8,23 "/>
+         </svg>
+         <p>Stock</p>
+      </a>
+      <a href="#" class="text-gray-700 hover:bg-blue-100 p-2 rounded">Reports</a>
+      <a href="#" class="text-gray-700 hover:bg-blue-100 p-2 rounded">Settings</a>
+    </nav>
+  </aside>
+
+  <!-- Main content -->
+  <main class="flex-1 p-8">
+    <h1 class="text-3xl font-semibold text-gray-800 mb-4">Welcome to the Dashboard</h1>
+    <p class="text-gray-600">Select a section from the sidebar to begin.</p>
+  </main>
+
+</body>
+</html>
