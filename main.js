@@ -2,9 +2,9 @@ const { app, BrowserWindow, Menu, ipcMain } = require('electron');
 const path = require('path');
 const db = require('./db');
 
-require('electron-reload')(__dirname, {
-  electron: path.join(__dirname, 'node_modules', '.bin', 'electron'),
-});
+// require('electron-reload')(__dirname, {
+ // electron: path.join(__dirname, 'node_modules', '.bin', 'electron'),
+//});
 
 function createWindow() {
   const win = new BrowserWindow({
@@ -18,7 +18,7 @@ function createWindow() {
   });
 
   win.loadFile('index.html'); // Your main/start page
-  Menu.setApplicationMenu(null);
+ // Menu.setApplicationMenu(null);
 }
 
 // IPC handler to fetch clients from DB
@@ -45,7 +45,20 @@ ipcMain.handle('search-clients', async (event, keyword) => {
     });
   });
 });
+ipcMain.handle('add-client', async (event, clientData) => {
+  return new Promise((resolve, reject) => {
+    const { name, Number } = clientData;
+    const query = `INSERT INTO clients (name, num_tel) VALUES (?, ?)`;
 
+    db.run(query, [name, Number], function (err) {
+      if (err) {
+        reject(err.message);
+      } else {
+        resolve({ success: true, id: this.lastID });
+      }
+    });
+  });
+});
 app.whenReady().then(() => {
   createWindow();
 

@@ -22,3 +22,20 @@
   left:0;
   top:0;
 }
+.toaster {
+    background-color: #86ff9a;
+    color: #042400;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    font-family: "Cairo", sans-serif;
+    font-size: 14px;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+.toaster.show {
+  opacity: 1;
+  transform: translateY(0);
+}

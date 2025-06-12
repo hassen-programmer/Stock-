@@ -2,7 +2,6 @@
 async function fetchClients() {
   try {
     const clients = await window.electronAPI.fetchClients();
-    console.log(clients); // Correct variable logged
 
     // Then you can render clients to the UI, for example:
     // displayClients(clients);
